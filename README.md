@@ -49,9 +49,8 @@ BUt recommended for production to create Own AMI
 # You can access the consul web UI using the following URL syntax.
    http://<consul-IP>:8500/ui
    e.g:  http://44.192.12.114:8500/ui
- 
-  
- # In 
+ ![consul-ui-screenshot](https://user-images.githubusercontent.com/46480999/174506801-ede1c368-e5d5-480d-9f3c-8c1f4b27d8c2.png)
+
  
  
 

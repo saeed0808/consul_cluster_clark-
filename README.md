@@ -11,15 +11,18 @@ AWS account IAM role with necessary permissions Terraform & AWS CLI configured o
 
 AMI using packer,aws cli 
     To build the Consul AMI:
-    git clone this repo to your computer.
-    Install Packer.
-    Configure your AWS credentials using one of the options supported by the AWS SDK. Usually, the easiest option is to set the AWS_ACCESS_KEY_ID and         AWS_SECRET_ACCESS_KEY environment variables.
-    Update the variables section of the consul.json Packer template to configure the AWS region, Consul version, and Dnsmasq version you wish to use. If     you want to install Consul Enterprise, skip the version variable and instead set the download_url to the full url that points to the
-    consul enterprise zipped package.
+    
+       - git clone this repo to your computer.
+       - Install Packer.
+       - Configure your AWS credentials using one of the options supported by the AWS SDK. Usually, the easiest option is to set the
+          AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables.
+       - Update the variables section of the consul.json Packer template to configure the AWS region, Consul version, and Dnsmasq version you wish to              use. If ou want to install Consul Enterprise, skip the version variable and instead set the download_url to the full url that points to 
+         the consul enterprise zipped package.
    
-   Run command to build AMI
+   - Run command to build AMI:
+   
         cd /consul_cluster_clark-/examples/consul-ami;
-        packer build consul.json
+        packer build consul.json;
  
 # Steps for consol cluster setup
 

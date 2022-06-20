@@ -12,17 +12,15 @@ AWS account IAM role with necessary permissions Terraform & AWS CLI configured o
 AMI using packer,aws cli 
     To build the Consul AMI:
     
-       - git clone this repo to your computer.
-       - Install Packer.
-       - Configure your AWS credentials using one of the options supported by the AWS SDK. Usually, the easiest option is to set the
-          AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables.
-       - Update the variables section of the consul.json Packer template to configure the AWS region, Consul version, and Dnsmasq version you wish to              use. If ou want to install Consul Enterprise, skip the version variable and instead set the download_url to the full url that points to 
-         the consul enterprise zipped package.
+  1. git clone this repo to your computer.
+  2. Install Packer.
+  3. Configure your AWS credentials using one of the options supported by the AWS SDK. Usually, the easiest option is to set the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables.
+  4. Update the variables section of the consul. json Packer template to configure the AWS region, Consul version, and Dnsmasq version you wish to use.        If you want to install Consul Enterprise, skip the version variable and instead set the download_url to the full url that points to the consul            enterprise zipped package.
    
-   - Run command to build AMI:
+   5. Run command to build AMI:
    
-        cd /consul_cluster_clark-/examples/consul-ami;
-        packer build consul.json;
+        - cd /consul_cluster_clark-/examples/consul-ami;
+        - packer build consul.json;
  
 # Steps for consol cluster setup
 
@@ -30,16 +28,12 @@ AMI using packer,aws cli
    e.g: ![image](https://user-images.githubusercontent.com/46480999/174508568-ead8f81f-8467-4f17-bd09-426a9718be24.png)
 
 3. Terraform install on which laptop/server you will be using to cloning and running code.
-    git clone https://github.com/saeed0808/consul_cluster_clark-.git;
-    cd consul_cluster_clark-;
-    terraform init;
-    terraform plan;
-    terraform apply --auto-approve;
+    - git clone https://github.com/saeed0808/consul_cluster_clark-.git;
+    - cd consul_cluster_clark-;
+    - terraform init;
+    - terraform plan;
+    - terraform apply --auto-approve;
     
-    # all terraform sucess 
-    Apply complete! Resources: 54 added, 0 changed, 0 destroyed.
-    
- 
 # consul cluster verification
 1. Go to aws console 
    1. ec2 3 ec2 should be running as defind for now 3 node cluster and in ASG min, max, desired are 3

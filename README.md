@@ -51,6 +51,15 @@ AMI using packer,aws cli
    - http://consul-IP:8500/ui;
   
  ![consul-ui-screenshot](https://user-images.githubusercontent.com/46480999/174506801-ede1c368-e5d5-480d-9f3c-8c1f4b27d8c2.png)
+ 
+ 
+ =============================== production ================================
+ 1. We need to keep AMI update in Timestamp format to rollback.
+ 2. Define auto scalling policy to manage better load on infra keep it in odd number recommended.
+ 3. Disable public ip. attach LB and bind with domain. use producation vpc created 
+ 4. make a best practice to maintain code uptodate and your team can not push code in main/master branch create staging and production branch and update code by create a feature branch with jira ticket.
+ 5. keep documentaion update for your team if you have faced any issue and discuss in retro or standup meeting.
+
 
  
  

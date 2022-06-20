@@ -21,6 +21,8 @@ AMI using packer,aws cli
    
         - cd /consul_cluster_clark-/examples/consul-ami;
         - packer build consul.json;
+   6. user new AMI in variables.tf file.
+
  
 # Steps for consol cluster setup
 
